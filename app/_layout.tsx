@@ -1,4 +1,5 @@
 import '../global.css';
+import '../src/mocks/runtimeFetch';
 import { Stack } from 'expo-router';
 
 export default function RootLayout() {
