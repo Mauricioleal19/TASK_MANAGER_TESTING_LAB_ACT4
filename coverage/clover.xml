@@ -1,123 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1784389847934" clover="3.2.0">
-  <project timestamp="1784389847934" name="All files">
-    <metrics statements="61" coveredstatements="7" conditionals="33" coveredconditionals="4" methods="28" coveredmethods="2" elements="122" coveredelements="13" complexity="0" loc="61" ncloc="61" packages="7" files="12" classes="12"/>
+<coverage generated="1785595967035" clover="3.2.0">
+  <project timestamp="1785595967035" name="All files">
+    <metrics statements="136" coveredstatements="125" conditionals="69" coveredconditionals="65" methods="79" coveredmethods="64" elements="284" coveredelements="254" complexity="0" loc="136" ncloc="136" packages="7" files="20" classes="20"/>
     <package name="src">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="types.ts" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/types.ts">
+      <file name="types.ts" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\types.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="13" coveredstatements="3" conditionals="11" coveredconditionals="4" methods="8" coveredmethods="2"/>
-      <file name="TaskCard.tsx" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/components/TaskCard.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="11" count="7" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
+      <metrics statements="34" coveredstatements="33" conditionals="23" coveredconditionals="22" methods="27" coveredmethods="23"/>
+      <file name="ConfirmDeleteDialog.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\components\ConfirmDeleteDialog.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="17" count="11" type="stmt"/>
       </file>
-      <file name="TaskForm.tsx" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/components/TaskForm.tsx">
-        <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+      <file name="LabeledInput.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\components\LabeledInput.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="12" count="140" type="stmt"/>
       </file>
-      <file name="TaskList.tsx" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/components/TaskList.tsx">
-        <metrics statements="5" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
+      <file name="PaymentInfoSection.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\components\PaymentInfoSection.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="18" count="14" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+      </file>
+      <file name="ShippingInfoSection.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\components\ShippingInfoSection.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="17" count="14" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+      </file>
+      <file name="StatusBadge.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\components\StatusBadge.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+      <file name="TaskCard.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\components\TaskCard.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="7" coveredconditionals="7" methods="4" coveredmethods="2"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="13" count="14" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+      </file>
+      <file name="TaskForm.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\components\TaskForm.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+      </file>
+      <file name="TaskList.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\components\TaskList.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="3"/>
+        <line num="13" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="26" count="11" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
+      </file>
+      <file name="UserInfoSection.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\components\UserInfoSection.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="17" count="14" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.hooks">
-      <metrics statements="26" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="14" coveredmethods="0"/>
-      <file name="useCounter.ts" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/hooks/useCounter.ts">
-        <metrics statements="5" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
+      <metrics statements="43" coveredstatements="42" conditionals="12" coveredconditionals="11" methods="27" coveredmethods="22"/>
+      <file name="useCounter.ts" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\hooks\useCounter.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="6" coveredmethods="6"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
       </file>
-      <file name="useCreateTask.ts" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/hooks/useCreateTask.ts">
-        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
+      <file name="useCreateTask.ts" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\hooks\useCreateTask.ts">
+        <metrics statements="25" coveredstatements="24" conditionals="8" coveredconditionals="7" methods="15" coveredmethods="10"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="9" count="15" type="stmt"/>
+        <line num="10" count="15" type="stmt"/>
+        <line num="11" count="15" type="stmt"/>
+        <line num="13" count="15" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="16" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="24" count="15" type="stmt"/>
+        <line num="26" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="30" count="15" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="41" count="15" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="45" count="15" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="53" count="15" type="stmt"/>
       </file>
-      <file name="useTaskList.ts" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/hooks/useTaskList.ts">
-        <metrics statements="13" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="6" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
+      <file name="useTaskList.ts" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\hooks\useTaskList.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="6" coveredmethods="6"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="9" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="22" count="10" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
       </file>
     </package>
     <package name="src.schemas">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="taskSchema.ts" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/schemas/taskSchema.ts">
+      <file name="taskSchema.ts" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\schemas\taskSchema.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.screens">
-      <metrics statements="3" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="CreateTaskScreen.tsx" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/screens/CreateTaskScreen.tsx">
-        <metrics statements="3" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+      <metrics statements="38" coveredstatements="29" conditionals="18" coveredconditionals="16" methods="20" coveredmethods="14"/>
+      <file name="CheckoutScreen.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\screens\CheckoutScreen.tsx">
+        <metrics statements="20" coveredstatements="19" conditionals="8" coveredconditionals="8" methods="12" coveredmethods="11"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="17" count="14" type="stmt"/>
+        <line num="18" count="14" type="stmt"/>
+        <line num="19" count="14" type="stmt"/>
+        <line num="20" count="14" type="stmt"/>
+        <line num="21" count="14" type="stmt"/>
+        <line num="23" count="14" type="stmt"/>
+        <line num="24" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="31" count="14" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+      </file>
+      <file name="CreateTaskScreen.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\screens\CreateTaskScreen.tsx">
+        <metrics statements="14" coveredstatements="10" conditionals="10" coveredconditionals="8" methods="6" coveredmethods="3"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="25" count="7" type="stmt"/>
+        <line num="44" count="21" type="stmt"/>
+        <line num="45" count="21" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="66" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="67" count="0" type="stmt"/>
+      </file>
+      <file name="HomeScreen.tsx" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\screens\HomeScreen.tsx">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="5" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="taskService.ts" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/services/taskService.ts">
-        <metrics statements="5" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="taskService.ts" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\services\taskService.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="17" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="5" type="stmt"/>
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="12" coveredstatements="1" conditionals="12" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="filterTasks.ts" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/utils/filterTasks.ts">
-        <metrics statements="5" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="12" count="0" type="stmt"/>
+      <metrics statements="12" coveredstatements="12" conditionals="12" coveredconditionals="12" methods="3" coveredmethods="3"/>
+      <file name="filterTasks.ts" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\utils\filterTasks.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="8" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="8" type="stmt"/>
       </file>
-      <file name="validateTask.ts" path="/Users/cristiandavidgutierrez/Development/projects/rn-testing-lab/task-manager/src/utils/validateTask.ts">
-        <metrics statements="7" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="2" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+      <file name="validateTask.ts" path="C:\Especializacion\NuevoRepoProfe\task-manager-testing-lab\src\utils\validateTask.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="2" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
       </file>
     </package>
   </project>
