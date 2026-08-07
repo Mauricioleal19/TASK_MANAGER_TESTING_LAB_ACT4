@@ -16,6 +16,7 @@ export function LabeledInput({ label, ...rest }: LabeledInputProps) {
         placeholderTextColor="#9ca3af"
         inputAccessoryViewID={Platform.OS === 'ios' ? KEYBOARD_ACCESSORY_ID : undefined}
         className="rounded-lg border border-gray-300 bg-white px-4 py-3 text-base text-gray-900"
+        accessibilityLabel={label}
         {...rest}
       />
     </View>

@@ -16,7 +16,14 @@ export function ConfirmDeleteDialog({
 }: ConfirmDeleteDialogProps) {
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onCancel}>
-      <View className="flex-1 items-center justify-center bg-black/40 p-6">
+      <View
+        testID="confirm-delete-dialog"
+        className="flex-1 items-center justify-center bg-black/40 p-6"
+        // Contiene el foco del lector de pantalla dentro del diálogo mientras
+        // está visible, para que VoiceOver/TalkBack no navegue al contenido
+        // de la pantalla que quedó debajo (iOS: accessibilityViewIsModal).
+        accessibilityViewIsModal
+      >
         <View className="w-full max-w-sm rounded-xl bg-white p-5">
           <Text className="text-lg font-bold text-gray-900">Eliminar tarea</Text>
           <Text className="mt-2 text-sm text-gray-600">
