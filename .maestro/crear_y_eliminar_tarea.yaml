@@ -1,0 +1,31 @@
+appId: com.taskmanager.app
+---
+# 1. Abrir la app sin tareas previas (AsyncStorage persiste entre corridas)
+- launchApp:
+    clearState: true
+- assertVisible: "Task Manager"
+- tapOn: "Flujo Todo List"
+- assertVisible: "Nueva tarea"
+- assertVisible: "No hay tareas aún"
+
+# 2. Crear la tarea
+- tapOn:
+    id: "input-titulo"
+- inputText: "Tarea para crear y eliminar"
+- tapOn: "Guardar"
+
+# 3. Verificar que se creó y aparece en la lista
+- assertVisible: "Tarea creada exitosamente"
+- assertVisible: "1 tarea"
+- assertVisible: "Tarea para crear y eliminar"
+
+# 4. Pedir eliminación desde la tarjeta
+- tapOn: "Eliminar tarea Tarea para crear y eliminar"
+# el Modal vive en otra ventana de iOS y tarda en entrar al árbol: assertVisible se rinde en ~400ms
+
+# 5. Confirmar en el diálogo
+- tapOn: "Confirmar eliminación"
+
+# 6. Verificar que la lista quedó vacía
+- assertVisible: "No hay tareas aún"
+- assertNotVisible: "Tarea para crear y eliminar"

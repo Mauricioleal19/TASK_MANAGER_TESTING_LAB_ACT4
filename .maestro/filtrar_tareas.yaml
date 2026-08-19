@@ -1,0 +1,51 @@
+# .maestro/filtrar_tareas.yaml
+#
+# Tipo de prueba: E2E (End-to-End) con Maestro.
+#
+# Flujo nuevo (Unidad 3). Ninguno de los flujos existentes ejercita los
+# filtros "Todas / Pendientes / Completadas" de CreateTaskScreen. Este flujo
+# automatiza ese recorrido:
+#   1) abrir la app -> 2) navegar a "Nueva tarea" -> 3) crear dos tareas
+#   -> 4) completar solo una de ellas -> 5) verificar que el filtro
+#   "Completadas" muestra únicamente la completada -> 6) verificar que
+#   "Pendientes" muestra únicamente la pendiente -> 7) verificar que "Todas"
+#   vuelve a mostrar ambas.
+appId: com.taskmanager.app
+---
+# 1. Abrir la app sin estado previo y entrar al flujo de tareas
+- launchApp:
+    clearState: true
+- assertVisible: "Task Manager"
+- tapOn: "Flujo Todo List"
+- assertVisible: "Nueva tarea"
+
+# 2. Crear la primera tarea (quedará pendiente)
+- tapOn:
+    id: "input-titulo"
+- inputText: "Tarea pendiente"
+- tapOn: "Guardar"
+- assertVisible: "Tarea creada exitosamente"
+
+# 3. Crear la segunda tarea y marcarla como completada
+- tapOn:
+    id: "input-titulo"
+- inputText: "Tarea completada"
+- tapOn: "Guardar"
+- assertVisible: "2 tareas"
+- tapOn: "Marcar tarea Tarea completada como completada"
+- assertVisible: "✓ Completada"
+
+# 4. Filtro "Completadas": solo debe verse la tarea completada
+- tapOn: "Completadas"
+- assertVisible: "Tarea completada"
+- assertNotVisible: "Tarea pendiente"
+
+# 5. Filtro "Pendientes": solo debe verse la tarea pendiente
+- tapOn: "Pendientes"
+- assertVisible: "Tarea pendiente"
+- assertNotVisible: "Tarea completada"
+
+# 6. Filtro "Todas": ambas tareas vuelven a ser visibles
+- tapOn: "Todas"
+- assertVisible: "Tarea pendiente"
+- assertVisible: "Tarea completada"

@@ -1,0 +1,20 @@
+appId: com.taskmanager.app
+---
+# 1. Abrir la app y entrar al flujo de tareas
+- launchApp
+- assertVisible: "Task Manager"
+- tapOn: "Flujo Todo List"
+- assertVisible: "Nueva tarea"
+
+# 2. Intentar guardar vacío no muestra confirmación
+- tapOn: "Guardar"
+- assertNotVisible: "Tarea creada exitosamente"
+
+# 3. Llenar el formulario y guardar
+- tapOn:
+    id: "input-titulo"
+- inputText: "Comprar materiales para el proyecto, prueba de automatización"
+- tapOn: "Guardar"
+
+# 4. Verificar confirmación de creación
+- assertVisible: "Tarea creada exitosamente"

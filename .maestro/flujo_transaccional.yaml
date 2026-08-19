@@ -1,0 +1,93 @@
+appId: com.taskmanager.app
+---
+# 1. Abrir la app y entrar al flujo transaccional
+- launchApp
+- assertVisible: "Task Manager"
+- tapOn: "Flujo Transaccional"
+- assertVisible: "Información del usuario"
+
+# 2. Información del usuario (visible al abrir)
+- tapOn:
+    id: "input-nombre"
+- inputText: "Juan Pérez"
+- hideKeyboard
+- tapOn:
+    id: "input-email"
+- inputText: "juan@correo.com"
+- hideKeyboard
+- tapOn:
+    id: "input-telefono"
+- inputText: "3000000000"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "input-direccion"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-direccion"
+- inputText: "Calle 123 #45-67"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "input-ciudad"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-ciudad"
+- inputText: "Bogota"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "input-codigo-postal"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-codigo-postal"
+- inputText: "110111"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "input-titular"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-titular"
+- inputText: "Juan Pérez"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "input-numero-tarjeta"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-numero-tarjeta"
+- inputText: "4111111111111111"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "input-vencimiento"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-vencimiento"
+- inputText: "12/28"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "input-cvv"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-cvv"
+- inputText: "123"
+- hideKeyboard
+
+# 5. Confirmar la transacción
+- scrollUntilVisible:
+    element:
+      text: "Confirmar pago"
+    direction: DOWN
+    centerElement: true
+- tapOn: "Confirmar pago"
+- assertVisible: "Transacción completada exitosamente"

@@ -1,0 +1,35 @@
+# .maestro/completar_tarea.yaml
+#
+# Tipo de prueba: E2E (End-to-End) con Maestro.
+#
+# Flujo nuevo (Unidad 3). Los flujos existentes (crear_tarea.yaml,
+# flujo_completo_tareas.yaml, crear_y_eliminar_tarea.yaml) cubren crear y
+# eliminar una tarea, pero ninguno probaba marcar una tarea como completada.
+# Este flujo automatiza ese recorrido:
+#   1) abrir la app -> 2) navegar a "Nueva tarea" -> 3) crear una tarea
+#   -> 4) marcarla como completada -> 5) verificar que el estado cambia a
+#   "✓ Completada" en la tarjeta.
+appId: com.taskmanager.app
+---
+# 1. Abrir la app sin estado previo y entrar al flujo de tareas
+- launchApp:
+    clearState: true
+- assertVisible: "Task Manager"
+- tapOn: "Flujo Todo List"
+- assertVisible: "Nueva tarea"
+
+# 2. Crear una tarea
+- tapOn:
+    id: "input-titulo"
+- inputText: "Repasar accesibilidad en React Native"
+- tapOn: "Guardar"
+- assertVisible: "Tarea creada exitosamente"
+- assertVisible: "1 tarea"
+
+# 3. Marcar la tarea como completada desde su propio control
+# (tapOn matchea por accessibilityLabel, igual que "Eliminar tarea ..." en
+# crear_y_eliminar_tarea.yaml)
+- tapOn: "Marcar tarea Repasar accesibilidad en React Native como completada"
+
+# 4. Verificar que el estado cambió en la tarjeta
+- assertVisible: "✓ Completada"
