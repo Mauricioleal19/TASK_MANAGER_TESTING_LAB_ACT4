@@ -54,42 +54,54 @@ describe('CreateTaskScreen - Integración', () => {
   // taskService.createTask -> MSW responde 201 -> la pantalla muestra el
   // banner de confirmación. Todas las capas internas son reales; solo la
   // respuesta del servidor está simulada.
-  it('crea una tarea exitosamente y muestra confirmación', async () => {
-    await renderScreen();
+  it(
+    'crea una tarea exitosamente y muestra confirmación',
+    async () => {
+      await renderScreen();
 
-    await fireEvent.changeText(
-      screen.getByPlaceholderText('Escribe el título de la tarea'),
-      'Estudiar pruebas de integración'
-    );
-    await fireEvent.press(screen.getByText('Guardar'));
+      await fireEvent.changeText(
+        screen.getByPlaceholderText('Escribe el título de la tarea'),
+        'Estudiar pruebas de integración'
+      );
+      await fireEvent.press(screen.getByText('Guardar'));
 
-    await waitFor(() => {
-      expect(screen.getByText('Tarea creada exitosamente')).toBeTruthy();
-    });
-  });
+      await waitFor(() => {
+        expect(screen.getByText('Tarea creada exitosamente')).toBeTruthy();
+      });
+    },
+    // El timeout por defecto de Jest (5000ms) resultó insuficiente en un
+    // runner de GitHub Actions bajo carga (render + fireEvent + round-trip
+    // por MSW); el mismo test pasa siempre en local. Se sube el timeout en
+    // vez de debilitar la aserción.
+    15000
+  );
 
   // Prueba de integración (escenario: error del servidor).
   // Sobrescribe el handler de MSW solo para este test para que POST /tasks
   // devuelva 500, y valida que la pantalla maneje el rechazo de la promesa
   // mostrando el banner de error y SIN agregar la tarea fallida a la lista
   // (efecto colateral que solo se detecta con el componente real montado).
-  it('muestra el banner de error si la API falla', async () => {
-    server.use(
-      http.post('https://api.taskmanager.com/tasks', () => new HttpResponse(null, { status: 500 }))
-    );
-    await renderScreen();
+  it(
+    'muestra el banner de error si la API falla',
+    async () => {
+      server.use(
+        http.post('https://api.taskmanager.com/tasks', () => new HttpResponse(null, { status: 500 }))
+      );
+      await renderScreen();
 
-    await fireEvent.changeText(
-      screen.getByPlaceholderText('Escribe el título de la tarea'),
-      'Tarea que no se guarda'
-    );
-    await fireEvent.press(screen.getByText('Guardar'));
+      await fireEvent.changeText(
+        screen.getByPlaceholderText('Escribe el título de la tarea'),
+        'Tarea que no se guarda'
+      );
+      await fireEvent.press(screen.getByText('Guardar'));
 
-    await waitFor(() => {
-      expect(screen.getByText('Error al crear la tarea')).toBeTruthy();
-    });
-    expect(screen.queryByText('Tarea que no se guarda')).toBeNull();
-  });
+      await waitFor(() => {
+        expect(screen.getByText('Error al crear la tarea')).toBeTruthy();
+      });
+      expect(screen.queryByText('Tarea que no se guarda')).toBeNull();
+    },
+    15000
+  );
 
   // Prueba de integración (escenario: datos vacíos).
   // Registra un espía sobre el handler POST /tasks de MSW para comprobar
