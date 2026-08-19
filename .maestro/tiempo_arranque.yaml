@@ -1,0 +1,21 @@
+# .maestro/tiempo_arranque.yaml
+#
+# Tipo de prueba: RENDIMIENTO (E2E con Maestro Cloud, usado como proxy de
+# medición ya que no se cuenta con Flashlight corriendo contra un
+# dispositivo/emulador local).
+#
+# Mide el tiempo de arranque (startup time) de la app: el tiempo entre
+# launchApp (cold start, sin estado previo) y que la pantalla principal
+# ("Task Manager") esté visible e interactiva. Maestro Cloud reporta la
+# duración de cada paso en su reporte (JUNIT/HTML), de donde se toma el
+# tiempo del paso "Assert that Task Manager is visible" como el tiempo de
+# arranque medido para este entregable.
+#
+# Métrica clave que cubre (Unidad 4, punto 2 de la actividad): tiempo de
+# arranque. La segunda métrica (tiempo de renderizado) se mide con Reassure,
+# ver __perf__/TaskList.perf-test.tsx.
+appId: com.taskmanager.app
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Task Manager"

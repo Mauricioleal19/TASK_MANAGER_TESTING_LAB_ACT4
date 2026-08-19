@@ -23,8 +23,15 @@ jobs:
       - name: Instalar dependencias
         run: npm ci --legacy-peer-deps
 
+      - name: Ejecutar linter
+        run: npx eslint .
+
       - name: Verificar tipos
         run: npx tsc --noEmit
 
-      - name: Ejecutar pruebas con cobertura
+      # El umbral mínimo de cobertura (70% branches/functions/lines/statements)
+      # está definido en jest.config.js (coverageThreshold). Con --coverage,
+      # Jest hace fallar este paso (y por lo tanto el pipeline) si algún
+      # proyecto queda por debajo del umbral.
+      - name: Ejecutar pruebas con cobertura y verificar umbral mínimo
         run: npx jest --coverage --ci
